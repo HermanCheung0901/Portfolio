@@ -7,8 +7,6 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export default function InputArea() {
 
-    const API_URL = process.env.API_URL;
-
     const router = useRouter();
 
     const [noteData, setNoteData] = useState([
@@ -63,7 +61,7 @@ export default function InputArea() {
         }
 
         try {
-            const res = await fetch(`${API_URL}/book-note/add-book/api/post`, {
+            const res = await fetch(`/book-note/add-book/api/post`, {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"

@@ -18,11 +18,7 @@ export default function NoteArea(props) {
   async function handleFormSubmit(order) {
 
     try {
-      const res = await fetch(`${API_URL}/book-note/api/booklist?field=${order.field}&sort=${order.sort}`, {
-        headers : {
-          'Content-Type': 'application/json',
-        }
-      });
+      const res = await fetch(`/book-note/api/booklist?field=${order.field}&sort=${order.sort}`);
 
       if (!res.ok) {
         throw new Error("Failed to fetch book list");

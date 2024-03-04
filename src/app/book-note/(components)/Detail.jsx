@@ -14,7 +14,6 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Detail({book_detail}) {
 
-    const API_URL = process.env.API_URL;
     const {_id, title, date_read, rate, OLID, review, coverURL, notes} = book_detail[0];
     const [isEditMode, setIsEditMode] = useState(false);
     const [notesData, setNotesData] = useState(notes);
@@ -87,7 +86,7 @@ export default function Detail({book_detail}) {
         }
 
         try {
-            const res = await fetch(`${API_URL}/book-note/detail/${_id}/api/patch`, {
+            const res = await fetch(`/book-note/detail/${_id}/api/patch`, {
                 method: "PATCH",
                 headers: {
                     "Content-type": "application/json"
