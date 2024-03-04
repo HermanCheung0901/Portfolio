@@ -142,12 +142,12 @@ export default function Detail({book_detail}) {
                                 <p className="sub-title">OLID : {OLID}</p>
                                 <p className="sub-title">Date Read : {
                                     isEditMode ?
-                                    <input name="date_read" type="date" value={formData.date_read} onChange={handleChange}/> :
+                                    <input key={_id} name="date_read" type="date" value={formData.date_read} onChange={handleChange}/> :
                                     <>{date_read}</>
                                 }</p>
                                 <p className="sub-title">Rating : {
                                     isEditMode ?
-                                    <input name="rate" value={formData.rate} onChange={handleChange} type="number" min="1" max="5" placeholder="1-5"/> :
+                                    <input key={_id} name="rate" value={formData.rate} onChange={handleChange} type="number" min="1" max="5" placeholder="1-5"/> :
                                     <>{generateStar(formData.rate)}</>
                                 }</p>
                             </div>
@@ -162,7 +162,7 @@ export default function Detail({book_detail}) {
                                 <p className="sub-title">My Review :</p>
                                 {
                                     isEditMode ?
-                                    <textarea name="review" className="auto-height" rows="10" value={formData.review} onChange={handleChange}></textarea> :
+                                    <textarea key={_id} name="review" className="auto-height" rows="10" value={formData.review} onChange={handleChange}></textarea> :
                                     <p className="content">{review}</p>
                                 }
                             </div>

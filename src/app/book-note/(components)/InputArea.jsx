@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-export default function inputArea() {
+export default function InputArea() {
 
     const API_URL = process.env.API_URL;
 
@@ -94,23 +94,24 @@ export default function inputArea() {
         <form id="add-form">
             <div className="input-item">
                 <label htmlFor="new-title" className="input-title">Book Title</label>
-                <input name="title" id="new-title" value={formData.title} onChange={handleformChange}/>
+                <input key={formData.title} name="title" id="new-title" value={formData.title} onChange={handleformChange}/>
             </div>
             <div className="input-item">
                 <label htmlFor="new-olid" className="input-title">OLID</label>
-                <input name="olid" id="new-olid" value={formData.olid} onChange={handleformChange} placeholder="e.g.,OL7826547M"/>
+                <input key={formData.olid} name="olid" id="new-olid" value={formData.olid} onChange={handleformChange} placeholder="e.g.,OL7826547M"/>
             </div>
             <div className="input-item">
                 <label htmlFor="new-date-read" className="input-title">Date Read</label>
-                <input name="date_read" id="new-date-read" type="date" value={formData.date_read} onChange={handleformChange}/>
+                <input key={formData.date_read} name="date_read" id="new-date-read" type="date" value={formData.date_read} onChange={handleformChange}/>
             </div>
             <div className="input-item">
                 <label htmlFor="new-rate" className="input-title">Rating</label>
-                <input name="rate" id="new-rate" type="number" min="1" max="5" value={formData.rate} onChange={handleformChange} placeholder="1-5"/>
+                <input key={formData.rate} name="rate" id="new-rate" type="number" min="1" max="5" value={formData.rate} onChange={handleformChange} placeholder="1-5"/>
             </div>
             <div className="input-item" id="input-review">
                 <label htmlFor="new-review" className="input-title">My Review</label>
                 <textarea
+                    key={formData.review}
                     name="review"
                     id="new-review"
                     className="auto-height"
@@ -127,6 +128,7 @@ export default function inputArea() {
                             <div>
                                 <label htmlFor={`new-note-${index+1}`} className="input-title">{index+1}.</label>
                                 <textarea
+                                    key={index}
                                     name={index}
                                     className="newNote auto-height"
                                     id={`new-note-${index+1}`}
