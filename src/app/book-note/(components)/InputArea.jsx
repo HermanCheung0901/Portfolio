@@ -94,24 +94,23 @@ export default function InputArea() {
         <form id="add-form">
             <div className="input-item">
                 <label htmlFor="new-title" className="input-title">Book Title</label>
-                <input key={formData.title} name="title" id="new-title" value={formData.title} onChange={handleformChange}/>
+                <input name="title" id="new-title" value={formData.title} onChange={handleformChange}/>
             </div>
             <div className="input-item">
                 <label htmlFor="new-olid" className="input-title">OLID</label>
-                <input key={formData.olid} name="olid" id="new-olid" value={formData.olid} onChange={handleformChange} placeholder="e.g.,OL7826547M"/>
+                <input name="olid" id="new-olid" value={formData.olid} onChange={handleformChange} placeholder="e.g.,OL7826547M"/>
             </div>
             <div className="input-item">
                 <label htmlFor="new-date-read" className="input-title">Date Read</label>
-                <input key={formData.date_read} name="date_read" id="new-date-read" type="date" value={formData.date_read} onChange={handleformChange}/>
+                <input name="date_read" id="new-date-read" type="date" value={formData.date_read} onChange={handleformChange}/>
             </div>
             <div className="input-item">
                 <label htmlFor="new-rate" className="input-title">Rating</label>
-                <input key={formData.rate} name="rate" id="new-rate" type="number" min="1" max="5" value={formData.rate} onChange={handleformChange} placeholder="1-5"/>
+                <input name="rate" id="new-rate" type="number" min="1" max="5" value={formData.rate} onChange={handleformChange} placeholder="1-5"/>
             </div>
             <div className="input-item" id="input-review">
                 <label htmlFor="new-review" className="input-title">My Review</label>
                 <textarea
-                    key={formData.review}
                     name="review"
                     id="new-review"
                     className="auto-height"
