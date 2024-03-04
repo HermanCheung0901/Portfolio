@@ -8,7 +8,7 @@ import SortingForm from "./SortingForm";
 export default function NoteArea(props) {
   const API_URL = process.env.API_URL;
   const [bookList, setBookList] = useState(props.book_list);
-  const [isEmptyBook, setIsEmptyBook] = useState(true);
+  const [isEmptyBook, setIsEmptyBook] = useState(false);
   
   //Render book list
   function createNote(book) {
