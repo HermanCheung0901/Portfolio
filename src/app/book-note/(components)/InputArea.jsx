@@ -125,8 +125,8 @@ export default function InputArea() {
                 {
                     noteData.map((note, index)=> {
                         return (
-                            <div>
-                                <label htmlFor={`new-note-${index+1}`} className="input-title">{index+1}.</label>
+                            <div key={index}>
+                                <label key={index} htmlFor={`new-note-${index+1}`} className="input-title">{index+1}.</label>
                                 <textarea
                                     key={index}
                                     name={index}

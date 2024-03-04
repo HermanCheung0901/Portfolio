@@ -174,9 +174,9 @@ export default function Detail({book_detail}) {
                             <p className="sub-title">My Notes :</p>
                             {notesData.map((note, index)=> {
                                 return (
-                                    <Col md="12">
-                                        <div className="note">
-                                            <label htmlFor="index" className="sub-title">{index+1}.</label>
+                                    <Col key={index} md="12">
+                                        <div key={index} className="note">
+                                            <label key={index} htmlFor="index" className="sub-title">{index+1}.</label>
                                             {
                                                 isEditMode ?
                                                 <textarea key={index} id={index} name="note" className="auto-height" rows="3"  value={note.note} onChange={handleChange}></textarea> :
