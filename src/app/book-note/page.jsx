@@ -5,8 +5,9 @@ import Description from "./(components)/Description";
 import Title from "./(components)/Title";
 
 async function getBookList() {
+  const API_URL = process.env.API_URL;
   try {
-    const res = await fetch("http://localhost:3000/book-note/api", {
+    const res = await fetch(`${API_URL}/book-note/api`, {
       cache: "no-store"
     });
 

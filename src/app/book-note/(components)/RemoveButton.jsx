@@ -6,13 +6,15 @@ import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 export default function RemoveButton({id}) {
 
+    const API_URL = process.env.API_URL;
+
     const router = useRouter();
 
     async function removeBook() {
         const confirmed = confirm("Please confirm to remove book.");
 
         if (confirmed) {
-            const res = await fetch(`http://localhost:3000/book-note/detail/${id}/api/remove`, {
+            const res = await fetch(`${API_URL}/book-note/detail/${id}/api/remove`, {
                 method: "DELETE",
             })
 

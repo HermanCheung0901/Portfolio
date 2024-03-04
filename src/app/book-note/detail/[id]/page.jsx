@@ -5,9 +5,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default async function DetailPage({params}) {
     const {id} = params;
 
+    const API_URL = process.env.API_URL;
+
     async function getBookDetail() {
         try {
-            const res = await fetch(`http://localhost:3000/book-note/detail/${id}/api/get`, {
+            const res = await fetch(`${API_URL}/book-note/detail/${id}/api/get`, {
                 cache: "no-store"
             });
 
