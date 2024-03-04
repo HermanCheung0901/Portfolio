@@ -2,13 +2,16 @@
 
 import { useEffect, useState } from "react";
 import Note from "./Note";
-import AddBtn from "./AddBtn";
 import SortingForm from "./SortingForm";
 
-export default function NoteArea(props) {
-  const API_URL = process.env.API_URL;
-  const [bookList, setBookList] = useState(props.book_list);
+export default function NoteArea({book_list}) {
+  const book = book_list;
+  const [bookList, setBookList] = useState(book);
   const [isEmptyBook, setIsEmptyBook] = useState(false);
+
+  useEffect(()=> {
+    setBookList(book);
+  }, [book])
   
   //Render book list
   function createNote(book) {

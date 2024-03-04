@@ -61,21 +61,41 @@ export default function InputArea() {
         }
 
         try {
-            const res = await fetch(`/book-note/add-book/api/post`, {
-                method: "POST",
-                headers: {
-                    "content-type": "application/json"
-                },
-                body: JSON.stringify(formData),
-            })
+            //Fetch book cover
+            const res = await fetch(`https://covers.openlibrary.org/b/olid/${formData.olid}.json`);
+
+            const bookData = res.json();
 
             if (res.ok) {
-                router.refresh();
-                router.push("/book-note");
+                const submitData= {
+                    ...formData,
+                    coverURL: bookData.source_url || `https://covers.openlibrary.org/b/olid/${formData.olid}-M.jpg`
+                };
+                try {
+                console.log(submitData)
+                //Insert new book info to database
+                    const res = await fetch(`/book-note/add-book/api/post`, {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(submitData),
+                })
+
+                if (res.ok) {
+                    router.refresh();
+                    router.push("/book-note");
+                } else {
+                    throw new Error ("Failed to add book note");
+                }
+                } catch (error) {
+                    console.log(error);
+                }
             } else {
-                throw new Error ("Failed to add book note");
+            throw new Error("Failed to fetch book cover")
             }
         } catch (error) {
+            alert("OLID not found. Please enter the correct OLID.")
             console.log(error);
         }
     }
@@ -122,8 +142,8 @@ export default function InputArea() {
                 {
                     noteData.map((note, index)=> {
                         return (
-                            <div key={index}>
-                                <label key={index} htmlFor={`new-note-${index+1}`} className="input-title">{index+1}.</label>
+                            <div key={`noteItem${index}`}>
+                                <label key={`notelabel${index}`} htmlFor={`new-note-${index+1}`} className="input-title">{index+1}.</label>
                                 <textarea
                                     key={index}
                                     name={index}

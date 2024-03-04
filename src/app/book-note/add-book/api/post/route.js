@@ -1,14 +1,16 @@
+import connect from "@/app/_lib/bookNoteDB";
 import Book from "../../../(model)/Book";
 
 export async function POST(request) {
     // Extract the necessary data from the request body
-    const {title, olid, date_read, rate, review, notes} = await request.json();
+    const {title, olid, date_read, rate, review,coverURL, notes} = await request.json();
 
     //Filter the vaild note
     const notesWithoutEmpty = notes.filter((note)=> {
         return note.note !== "" && note.note !== null && note.note !== undefined;
     })
     try {
+        await connect();
         // Save new book to DB
         const new_book = new Book({
             title:title,
@@ -16,6 +18,7 @@ export async function POST(request) {
             rate:rate,
             OLID:olid,
             review:review,
+            coverURL:coverURL,
             notes:notesWithoutEmpty,
         });
         await new_book.save();

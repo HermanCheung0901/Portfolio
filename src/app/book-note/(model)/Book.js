@@ -13,6 +13,7 @@ const bookSchema = new mongoose.Schema(
     rate: String,
     OLID:String,
     review:String,
+    coverURL:String,
     notes:[noteSchema]
   },
 

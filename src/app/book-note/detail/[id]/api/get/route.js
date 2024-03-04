@@ -1,9 +1,9 @@
 import Book from "../../../../(model)/Book";
-import getCover from "@/app/_lib/getCover";
+import connect from "@/app/_lib/bookNoteDB";
 
 export async function GET(_request, {params}) {
+    await connect();
     const {id} = params;
-    const result = await Book.findById(id).exec();
-    const bookDetail = await getCover(result);
+    const bookDetail = await Book.findById(id).exec();
     return Response.json(bookDetail);
 }

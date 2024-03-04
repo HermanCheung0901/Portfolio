@@ -16,7 +16,7 @@ async function getBookList() {
     }
 
     const data = await res.json();
-    console.log("home")
+    console.log("access to home page")
     return data;
   } catch (error) {
     console.log(error);
@@ -26,7 +26,6 @@ async function getBookList() {
 export default async function HomePage() {
 
   const book_list = await getBookList();
-
   return (
     <>
       <Title title={"My Book Notes"}/>

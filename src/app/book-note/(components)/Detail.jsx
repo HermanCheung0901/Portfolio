@@ -14,7 +14,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Detail({book_detail}) {
 
-    const {_id, title, date_read, rate, OLID, review, coverURL, notes} = book_detail[0];
+    const {_id, title, date_read, rate, OLID, review, coverURL, notes} = book_detail;
     const [isEditMode, setIsEditMode] = useState(false);
     const [notesData, setNotesData] = useState(notes);
     const [formData, setFormData] = useState({
