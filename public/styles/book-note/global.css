@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3eeea !important;
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+
+.title {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    padding: 0 !important;
+}
+
+.title a {
+    text-decoration: none;
+    color: #776B5D;
+}
+
+.summary {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 52px;
+}
+
+#order_select option {
+    text-align: center;
+}
+
+.addNewBtn {
+    background-color: #776b5d;
+    color: #fff;
+    border: none;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    transition: 0.1s;
+    z-index: 1;
+    box-shadow: 2px 2px 10px darkgrey;
+    text-decoration: none;
+}
+
+.addNewBtn a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.addNewBtn a svg {
+    width: 14px;
+}
+
+.addNewBtn:hover {
+    background-color: #B0A695;
+}
+
+.addNewBtn:active {
+    background-color: #60574d;
+}
+
+.addNewBtn.withBooks {
+    position: fixed;
+    right: 30px;
+    bottom: 32px;
+}
+
+.detail-button a{
+    text-decoration: none;
+    color: #776B5D;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.detail-button a:hover {
+    color: #B0A695;
+    border-bottom: 2px solid #B0A695;
+}
+
+.book-rate {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #776B5D;
+    font-weight: 500;
+}
+
+.book-title {
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 1.1px;
+    color: rgb(33, 37, 41);
+}
+
+.book-review {
+    font-size: 16px;
+    color: rgb(62, 62, 62);
+    margin-top: 12px;
+    margin-bottom: 36px;
+    text-align: justify;
+    white-space: pre-line;
+    height: 100px;
+    overflow: hidden;
+}
+
+.left-col {
+    display: inline-block;
+}
+
+.book-cover {
+    width: 180px;
+    height: 271px;
+    position: relative;
+}
+
+.book-note {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+#sortingForm select {
+    margin-left: 8px;
+}
+
+
+@media (min-width:992px) {
+    .main {
+        padding-left: 200px !important;
+        padding-right: 200px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .book-note {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .book-note {
+        text-align: center;
+        padding: 0 100px;
+    }
+
+    .book-review {
+        text-align: center;
+        margin-top: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .book-note {
+        text-align: center;
+        padding: 0 50px;
+    }
+}

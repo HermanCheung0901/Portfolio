@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/_lib/bookNoteDB.js", "src/app/book-note/page.jsx", "src/app/book-note/(components)/Note.jsx", "src/app/book-note/(components)/Title.jsx", "src/app/book-note/(components)/SortingForm.jsx", "src/app/book-note/(components)/Header.jsx", "src/app/book-note/(components)/Description.jsx", "src/app/book-note/(components)/AddBtn.jsx", "src/app/book-note/layout.jsx", "src/app/Footer.jsx", "src/app/Header.jsx", "src/app/layout.jsx", "src/app/page.jsx", "src/app/Project.jsx", "src/app/ProjectArea.jsx"],
+  "exclude": ["node_modules"]
+}

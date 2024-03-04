@@ -1,0 +1,114 @@
+.input-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #776B5D;
+    margin: 0;
+    width: 113px;
+}
+
+textarea {
+    resize: none !important;
+    margin-top: 12px !important;
+    width: 100%;
+    border-radius: 7px;
+    padding: 2px 5px;
+    border: 2px solid #EBE3D5;
+    outline: none;
+    text-align: justify;
+    font-size: 16px;
+}
+
+textarea:focus {
+    border: 2px solid #B0A695 !important;
+}
+
+#new-title {
+    width: 100%;
+    margin-left: 13px;
+}
+
+#new-olid, #new-date-read {
+    width: 146px;
+}
+
+#add-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-form > * {
+    margin-top: 18px;
+}
+
+#add-form input{
+    border-radius: 7px;
+    padding: 2px 5px;
+    border: 2px solid #EBE3D5;
+    outline: none;
+    font-size: 16px;
+    height: 30px;
+}
+
+#add-form input:focus {
+    border: 2px solid #B0A695 !important;
+}
+
+.input-item:not(#input-review, #input-notes) {
+    display: flex;
+    align-items: center;
+}
+
+.add-notes-button {
+    font-size: 16px;
+    align-self: center;
+    background-color: transparent;
+    color: #776B5D;
+    border: none;
+    border-bottom: 2px solid #776B5D;
+    cursor: pointer;
+    transition: 0.1s;
+    margin-bottom: 18px;
+}
+
+.add-notes-button:hover {
+    color: #B0A695;
+    border-color: #B0A695;
+}
+
+.submit-button {
+    background-color: #776b5d;
+    color: #fff;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    transition: 0.1s;
+    z-index: 1;
+    box-shadow: 1px 1px 10px darkgrey;
+    font-size: 18px;
+    font-size: 22px;
+}
+
+.submit-button:hover {
+    background-color: #B0A695;
+}
+
+.submit-button:active {
+    background-color: #60574d;
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    #new-review {
+        height: 400px;
+    }
+}
+
+
+@media (max-width:768px) {
+    #new-review {
+        height: 500px;
+    }
+
+
+}
