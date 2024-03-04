@@ -8,10 +8,9 @@ import connect from "./_lib/bookNoteDB";
 export default function Home() {
   return (
     <div>
-      {/* <Header />
+      <Header />
       <ProjectArea />
-      <Footer /> */}
-      hi
+      <Footer />
     </div>
   );
 }
