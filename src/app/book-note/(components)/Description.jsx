@@ -8,7 +8,7 @@ export default function Description() {
       organize your book collection and capture your thoughts.`}
       <br />
       <br />
-      {`Select the book you've read from`} <Link href="https://openlibrary.org/">Open Library</Link>{`. Copy the Open Library ID (OLID) of the book and add your notes by pressing Add Book button. Once added, you can start creating
+      {`Select the book you've read from`} <Link href="https://openlibrary.org/" target="_blank">Open Library</Link>{`. Copy the Open Library ID (OLID) of the book and add your notes by pressing Add Book button. Once added, you can start creating
       personalized notes, jotting down quotes, and highlighting key takeaways.`}
     </p>
   );

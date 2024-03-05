@@ -37,6 +37,7 @@
 #project-wrapper .card {
     background-color: #fff;
     max-width: 22rem;
+    height: 400px;
 }
 
 #project-wrapper .card .card-title{
@@ -50,6 +51,7 @@
     font-size: 20px;
     font-weight: 300;
     color:#383838;
+    height: 150px;
 }
 
 #project-wrapper .card .text{
@@ -65,7 +67,7 @@
 
 #project-area {
     background-color: #fff;
-    height: 65vh;
+    margin-bottom: 45px;
 }
 
 #button-group {
@@ -85,4 +87,17 @@
 
 #button-group .btn{
     color: white;
+}
+
+@media (max-width: 768px) {
+    #project-wrapper .card {
+        margin-bottom: 25px;
+    }
+
+    #project-wrapper .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

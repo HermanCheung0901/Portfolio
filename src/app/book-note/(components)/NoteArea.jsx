@@ -15,7 +15,7 @@ export default function NoteArea({book_list}) {
     } else {
       setIsEmptyBook(false)
     }
-  }, [])
+  }, [bookList])
 
   //Render book list
   function createNote(book) {
