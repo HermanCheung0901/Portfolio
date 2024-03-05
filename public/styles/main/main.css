@@ -74,16 +74,15 @@
     gap: 12px;
 }
 
-#button-group button {
+#button-group .btn {
     border: 3px solid #579BB1;
     background-color: #579BB1;
 }
 
-#button-group button:hover {
+#button-group .btn:hover {
     border: 3px solid #34697b;
 }
 
-#button-group button a{
+#button-group .btn{
     color: white;
-    text-decoration: none;
 }

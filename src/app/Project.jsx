@@ -1,10 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-export default function Project({route}) {
+export default function Project({route, code}) {
   return (
     <Card>
       <Card.Body>
@@ -18,8 +17,8 @@ export default function Project({route}) {
           <span>ReactJS/NextJS, RESTful API, MongoDB</span>
         </div>
         <div id="button-group">
-          <Button><Link href="/">Code</Link></Button>
-          <Button><Link href={route}>Review</Link></Button>
+          <Button href={code} target="_blank">Code</Button>
+          <Button href={route}>Review</Button>
         </div>
       </Card.Body>
     </Card>

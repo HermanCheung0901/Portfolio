@@ -196,9 +196,9 @@ export default function Detail({book_detail}) {
                             <RemoveButton id={_id}/>
                             <button className="cancel-button" type="button" onClick={()=>{hanldeEditModeSwitch()}}><FontAwesomeIcon icon={faXmark} style={{color: "#ffffff",}} /> Cancel</button>                          
                         </div></> :
-                        <button className="edit-button" type="button" onClick={()=>{hanldeEditModeSwitch()}}>
+                        <a className="edit-button" onClick={()=>{hanldeEditModeSwitch()}}>
                             <FontAwesomeIcon icon={faPenToSquare} style={{color: "#ffffff",}} /> Edit Note
-                        </button>
+                        </a>
                     }         
             </form>
             

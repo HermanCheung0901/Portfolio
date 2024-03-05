@@ -48,7 +48,7 @@ body {
     text-decoration: none;
 }
 
-.addNewBtn a {
+.addNewBtn {
     color: #fff;
     text-decoration: none;
     font-size: 17px;
@@ -58,7 +58,7 @@ body {
     gap: 5px;
 }
 
-.addNewBtn a svg {
+.addNewBtn svg {
     width: 14px;
 }
 
@@ -131,6 +131,18 @@ body {
 
 #sortingForm select {
     margin-left: 8px;
+}
+
+.emptyText {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #776B5D;
 }
 
 

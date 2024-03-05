@@ -10,9 +10,13 @@ export default function NoteArea({book_list}) {
   const [isEmptyBook, setIsEmptyBook] = useState(false);
 
   useEffect(()=> {
-    setBookList(book);
-  }, [book])
-  
+    if (bookList == "") {
+      setIsEmptyBook(true)
+    } else {
+      setIsEmptyBook(false)
+    }
+  }, [])
+
   //Render book list
   function createNote(book) {
     return <Note key={book._id} id={book._id} cover={book.coverURL} title={book.title} rate={book.rate} review={book.review} />;
@@ -38,7 +42,7 @@ export default function NoteArea({book_list}) {
     <SortingForm onSubmit={handleFormSubmit}/>
     <div className="note-area">
       {isEmptyBook ? 
-      <><hr/><p>no note..</p></> : 
+      <><hr/><div className="emptyText">Press Add Book button to create your first note</div></> : 
       bookList.map(createNote)}
     </div>
   </>
